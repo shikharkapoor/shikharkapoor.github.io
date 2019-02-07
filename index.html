@@ -55,23 +55,22 @@
 
     <style>
       body {
-        color: #1F5253;
         background-color: #000;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Roboto',Arial,sans-serif;
         line-height: 1.3;
         font-weight: 400;
         font-size: 17px;
+        margin: 0px;
       }
       main {
         padding: 0 20px;
         position: relative;
           z-index: 2;
-          background-color: #fff;
-          top: 41vw;
+          background-color: #f1f2f4;
+          top: 44vw;
       }
       section {
         background-color: #fff;
-        border-radius: 5px;
         box-shadow: 0 2px 3px 1px rgba(0,0,0,.05);
         padding: 20px;
         margin: 0 auto 25px;
@@ -89,67 +88,22 @@
         padding-bottom: 0;
         margin-bottom: 0;
       }
-      h1 {
-        font-size: 42px;
-        font-family: 'Playfair Display', serif;
-        margin: 0 0 5px;
-        font-weight: 700;
-        line-height: 1.1;
+      @media all and (min-width: 630px) {
+        main {
+            top: 247px;
+        }
       }
-      h2 {
-        margin: 0 0 20px;
-        font-family: 'Playfair Display', serif;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 1.1;
+      #top-images{
+      	font-size: 1px;
       }
-      h3 {
-        margin: 0 0 20px;
-        font-family: 'Playfair Display', serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1.1;
+      .sub-heading {
+      	font-size: 16px;
+      	font-weight: 500;
+      	margin-bottom: 8px;
       }
-      h4 {
-        margin: 0 0 20px;
-        font-family: 'Playfair Display', serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.1;
-      }
-      h5 {
-        margin: 0 0 20px;
-        font-family: 'Playfair Display', serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.1;
-      }
-      h6 {
-        margin: 0 0 14px;
-        font-family: 'Playfair Display', serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1.1;
-      }
-      p {
-        margin: 0 0 20px;
-      }
-      a {
-        color: #1F5253;
-        text-decoration: underline;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      td {
-        border-bottom: 1px solid #E0E9E2;
-        width: 50%;
-        padding: 12px 0;
-      }
-      b, strong {
-        font-weight: 600;
+      .sub-content {
+      	font-size: 14px;
+      	margin-bottom: 12px;
       }
       .header {
           position: fixed;
@@ -161,270 +115,13 @@
           z-index: 2;
           transform: translateX(-50%);
       }
-      .subhead {
-        border-bottom: 1px solid #E0E9E2;
-        padding-bottom: 10px;
+      .content-image {
+      	margin-bottom: 16px;
       }
-      .button,
-      input[type=submit] {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        padding: 0 40px;
-        height: 42px;
-        border: none;
-        color: #fff;
-        background-color: #D3835C;
-        font-family: inherit;
-        font-size: inherit;
-        cursor: pointer;
-        border-radius: 21px;
-        -webkit-appearance: none;
-        text-decoration: none;
-      }
-      .align-center {
-        text-align: center;
-      }
-      .align-right {
-        text-align: right;
-      }
-      .color-orange {
-        color: #D3835C;
-      }
-      .plant-class {
-        margin-bottom: 5px;
-      }
-      .no-highlight {
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          -webkit-tap-highlight-color: transparent;
-          -khtml-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-      }
-      .no-highlight:focus {
-        outline: none;
-      }
-
-      /* Tabs */
-      .tab-content > div {
-        display: none;
-      }
-      amp-selector [option][selected] {
-        outline: none;
-      }
-      amp-selector:focus {
-        outline: none;
-      }
-      amp-selector.tab-menu .underline {
-        position: absolute;
-        height: 3px;
-        width: 50%;
-        transform-origin: left;
-        bottom: 0;
-        left: 0;
-        transition: .4s transform ease-in-out;
-      }
-      amp-selector.tab-menu .underline:after {
-        height: 100%;
-        width: 100%;
-        background-color: #C66731;
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        transform-origin: left;
-        transition: .4s transform ease-in-out;
-      }
-      amp-selector.tab-menu .underline {
-        transform: translateX(0);
-      }
-      amp-selector.tab-menu .underline:after {
-        transform: scaleX(.8);
-      }
-      amp-selector[selected="b"].tab-menu .underline {
-        transform: translateX(100%);
-      }
-      amp-selector[selected="b"].tab-menu .underline:after {
-        transform: scaleX(.9);
-      }
-      .tab-content > div[selected] {
-        display: block;
-      }
-      .tab-menu {
-        display: flex;
-        border-bottom: 1px solid #E0E9E2;
-        margin-bottom: 20px;
-      }
-      .tab-menu > div {
-        width: 100%;
-      }
-      .tab-menu h2 {
-        margin: 0;
-        padding: 0 0 10px;
-      }
-      .tab-menu > div[selected] h2 {
-        color: #C66731;
-      }
-
-      /* Carousel */
-      amp-carousel {
-        width: 100vw;
-        margin-left: -40px;
-      }
-      amp-carousel > div {
-        vertical-align: top;
-      }
-      .amp-scrollable-carousel-slide {
-        margin-left: 12px;
-      }
-      .amp-scrollable-carousel-slide:first-child {
-        margin-left: 40px;
-      }
-      .amp-scrollable-carousel-slide:last-child {
-        margin-right: 40px;
-      }
-      .amp-carousel-button {
-        display: none;
-      }
-      .box {
-        border-radius: 5px;
-        background-color: #F0F0ED;
-        width: 230px;
-        height: 260px;
-        overflow: hidden;
-        display: block;
-        text-decoration: none;
-        vertical-align: top;
-      }
-      .box .content {
-        padding: 15px;
-        box-sizing: border-box;
-        height: 110px;
-        overflow: hidden;
-        white-space: normal;
-        color: #1D604A;
-      }
-      .box .content p {
-        color: #84A69A;
-        margin-bottom: 0;
-      }
-      .box .content h3 {
-        margin-bottom: 10px;
-      }
-
-      /* Video */
-      .video-player {
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 20px;
-      }
-      .play-icon {
-        position: absolute;
-        z-index: 3;
-        left: 50%;
-        top: 50%;
-        width: 60px;
-        height: 60px;
-        transform: translate(-50%, -50%);
-        background: url(assets/template-product/play-arrow.svg) no-repeat center center/100%;
-      }
-
-      /* Forms */
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        width: 100%;
-        height: 42px;
-        box-sizing: border-box;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-family: inherit;
-        font-size: 14px;
-        -webkit-appearance: none;
-        background-color: #F0F0ED;
-        margin-bottom: 10px;
-        color: #1F5253;
-      }
-      textarea {
-        height: 75px;
-        resize: none;
-      }
-      ::-webkit-input-placeholder {
-        color: #84A69A;
-      }
-      ::-moz-placeholder {
-        color: #84A69A;
-        opacity: 1;
-      }
-      :-ms-input-placeholder {
-        color: #84A69A;
-      }
-      .form-message {
-        margin: 20px 0;
-      }
-      .form-message p {
-        margin: 0;
-      }
-
-      /* Comments */
-      #comments ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-      }
-      #comments li {
-        display: none;
-        border-top: 1px solid #cbe1c8;
-        margin-top: 25px;
-        padding-top: 25px;
-      }
-      #comments li:nth-child(1),
-      #comments li:nth-child(2),
-      #comments.show-all li {
-        display: flex;
-      }
-      #more-comments.hide {
-        display: none;
-      }
-      #comments .content p {
-        margin-bottom: 0;
-      }
-      #comments .content p.name {
-        margin-bottom: -5px;
-      }
-      #comments .avatar {
-        flex-shrink: 0;
-        margin-right: 15px;
-      }
-      .avatar-wrapper {
-        border-radius: 50%;
-        overflow: hidden;
-        height: 40px;
-        width: 40px;
-      }
-      #comments time {
-        color: #84A69A;
-        font-size: 12px;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-      #more-comments {
-        margin-top: 20px;
-      }
-      #more-comments a {
-        text-decoration: none;
-      }
-      @media all and (min-width: 630px) {
-        main {
-            top: 247px;
-        }
-      }
-      #top-images{
-      	font-size: 1px;
+      .selection-container {
+      	margin-top: 5px;
+      	border-top: 1px solid #efefef;
+      	padding-top: 10px;
       }
     </style>
 
@@ -442,24 +139,40 @@
         </div>
       </section>
       <section>
-        <div id="top-images">
-        	<img src="https://rukminim1.flixcart.com/flap/1439/560/image/785789.jpg?q=90" width="320"/>
-        	<img src="https://rukminim1.flixcart.com/flap/1439/319/image/2d5944e8b2c681c6.jpg?q=90" width="320"/>
+        <h2>Screen size</h2>
+        <div class="content-image">
+        	<img src="assets/screen-size.png" width="320"/>
         </div>
+        <div class="sub-heading">Up To 81 cm (32)</div>
+		<div class="sub-content">
+			If HD content (720p) is what you primarily watch, choose a 81 cm (32) TV or one with a smaller screen. Maintain a viewing distance of at least 5 feet for the best experience.
+		</div>
+		<div class="sub-heading">81 cm (32) - 127 cm (50)</div>
+		<div class="sub-content">
+			If you prefer Full HD content (1080p) from DTH services and Blu-ray players, choose a TV with a screen size between 81 cm (32) and 127 cm (50). In this case, maintain a minimum viewing distance of 6 feet at least.
+		</div>
+		<div class="sub-heading">Above 127 cm (50)</div>
+		<div class="sub-content">
+			For making the most out of 4K/Ultra HD content, choose a TV with a screen size that's above 127 cm (50) with a minimum viewing distance of 8 feet. Since 4K content is not widely available, ensure that your content sources are in place.
+		</div>
+		<div class="selection-container">
+			<div class="sub-heading">Which screen size fits your need?</div>
+			<div class="sub-content">
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>60 inch & Above</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>48 - 55 inch</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>39 - 43 inch</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>32 inch & below</label>
+				</div>
+			</div>
+		</div>
       </section>
-      <section>
-        <div id="top-images">
-        	<img src="https://rukminim1.flixcart.com/flap/1439/560/image/785789.jpg?q=90" width="320"/>
-        	<img src="https://rukminim1.flixcart.com/flap/1439/319/image/2d5944e8b2c681c6.jpg?q=90" width="320"/>
-        </div>
-      </section>
-      <section>
-        <div id="top-images">
-        	<img src="https://rukminim1.flixcart.com/flap/1439/560/image/785789.jpg?q=90" width="320"/>
-        	<img src="https://rukminim1.flixcart.com/flap/1439/319/image/2d5944e8b2c681c6.jpg?q=90" width="320"/>
-        </div>
-      </section>
-
     </main>
 
   </body>
