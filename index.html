@@ -41,7 +41,7 @@
 			"arContent": {
 			    "@type": "WebPage",
 			    "name": "Planning to buy a TV?",
-			    "image": "https://rukminim1.flixcart.com/image/832/832/j65cnm80/television/w/s/6/lg-43lj554t-original-imaewzch5qqjer7z.jpeg",
+			    "image": "https://rukminim1.flixcart.com/image/752/304/j5lchow0/television/d/e/b/-original-imaew8wx4ek5zrxu.jpeg",
 			    "url": "https://shikharkapoor.github.io/",
 			    "publisher": {
 			      "@type": "Organization",
@@ -126,7 +126,7 @@
       .results-button{
       	    background: #2874f0;
     		border-radius: 3px;
-    		padding: 13px 36px;
+    		padding: 13px 150px;
     		font-weight: 400;
     		color: #fff;
 		    display: inline-block;
@@ -140,6 +140,18 @@
 	  .button-container {
 	  		text-align: right;
       }
+      #sticky-bottom-button {
+      	background-color: #fff;
+      	position: sticky;
+      	bottom: 0;
+      	z-index: 2;
+      	padding: 10px;
+      	border-top: 1px solid #efefef;
+      	text-align: center;
+      }
+      .bottom-empty {
+      	height: 130px;
+      }
     </style>
 
   </head>
@@ -148,7 +160,7 @@
 
     <img class="header" src="assets/template-product/azalea.jpg" srcset="assets/hero-bg.jpg" width="500" alt="TV buying guide">
 
-    <main>
+    <main id="main-container">
       <section>
         <div id="top-images">
         	<img src="https://rukminim1.flixcart.com/flap/1439/560/image/785789.jpg?q=90" width="320"/>
@@ -187,9 +199,6 @@
 				<div class="selection-option">
 					<input type="checkbox" name="tmp"/> <label>32 inch & below</label>
 				</div>
-			</div>
-			<div class="button-container">
-				<div class="results-button" data-url="https://www.flipkart.com/televisions/pr?sid=ckf%2Cczl&otracker=categorytree&p%5B%5D=facets.screen_size%255B%255D%3D48%2B-%2B55">Show results</div>
 			</div>
 		</div>
       </section>
@@ -233,9 +242,6 @@
 					<input type="checkbox" name="tmp"/> <label>HD</label>
 				</div>
 			</div>
-			<div class="button-container">
-				<div class="results-button" data-url="https://www.flipkart.com/televisions/pr?sid=ckf%2Cczl&otracker=categorytree&p%5B%5D=facets.screen_size%255B%255D%3D48%2B-%2B55">Show results</div>
-			</div>
 		</div>
       </section>
       <section>
@@ -277,15 +283,139 @@
 					<input type="checkbox" name="tmp"/> <label>No</label>
 				</div>
 			</div>
-			<div class="button-container">
-				<div class="results-button" data-url="https://www.flipkart.com/televisions/pr?sid=ckf%2Cczl&otracker=categorytree&p%5B%5D=facets.screen_size%255B%255D%3D48%2B-%2B55">Show results</div>
+		</div>
+      </section>
+      <section>
+        <h2>Sound Quality</h2>
+        <div class="content-image">
+        	<img src="assets/sound-quality.png" width="320"/>
+        </div>
+        <div class="sub-heading">Audio Output</div>
+		<div class="sub-content">
+			Check the sound rating in watts. A 15 W speaker system is ideal for up to 101.6 cm (40) TVs. Go with a 20-25 W rated sound system for larger TVs for enough headroom for those movie marathons. Some TVs also come with in-built woofers which provide a pronounced bass response.
+		</div>
+		<div class="sub-heading">Speaker Positioning</div>
+		<div class="sub-content">
+			Speakers are mounted either at the bottom or the front. Front-mounted speakers offer the best quality, but the current collection of thinner-frame TVs position the speakers at the bottom. In that case, mount it on a wall for sound waves to move freely.
+		</div>
+		<div class="sub-heading">Sound Customization</div>
+		<div class="sub-content">
+			Not all rooms and environments are the same. TVs with surround-sound modes and graphic equalizers allow you to fine-tune the sound output.
+		</div>
+		<div class="selection-container">
+			<div class="sub-heading">What are your audio preferences?</div>
+			<div class="sub-content">
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>15 Watt speakers</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Dolby Digital</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Front-mounted Speakers</label>
+				</div>
+			</div>
+		</div>
+      </section>
+      <section>
+        <h2>Sound Quality</h2>
+        <div class="content-image">
+        	<img src="assets/sound-quality.png" width="320"/>
+        </div>
+        <div class="sub-heading">Audio Output</div>
+		<div class="sub-content">
+			Check the sound rating in watts. A 15 W speaker system is ideal for up to 101.6 cm (40) TVs. Go with a 20-25 W rated sound system for larger TVs for enough headroom for those movie marathons. Some TVs also come with in-built woofers which provide a pronounced bass response.
+		</div>
+		<div class="sub-heading">Speaker Positioning</div>
+		<div class="sub-content">
+			Speakers are mounted either at the bottom or the front. Front-mounted speakers offer the best quality, but the current collection of thinner-frame TVs position the speakers at the bottom. In that case, mount it on a wall for sound waves to move freely.
+		</div>
+		<div class="sub-heading">Sound Customization</div>
+		<div class="sub-content">
+			Not all rooms and environments are the same. TVs with surround-sound modes and graphic equalizers allow you to fine-tune the sound output.
+		</div>
+		<div class="selection-container">
+			<div class="sub-heading">What are your audio preferences?</div>
+			<div class="sub-content">
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>15 Watt speakers</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Dolby Digital</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Front-mounted Speakers</label>
+				</div>
+			</div>
+		</div>
+      </section>
+      <section>
+        <h2>Connectivity</h2>
+        <div class="content-image">
+        	<img src="assets/connectivity-options.png" width="320"/>
+        </div>
+        <div class="sub-heading">USB Port</div>
+		<div class="sub-content">
+			A USB port is very handy if you want to play content directly from pen-drives and external hard drives on your TV. At least 2 ports are recommended.
+		</div>
+		<div class="sub-heading">HDMI Port</div>
+		<div class="sub-content">
+			Most LED TVs come with at least 2 HDMI ports - for your HD set-top box and Blu-ray/DVD player. A couple more ports will ensure that you aren't left high and dry after buying that shiny new gaming console.
+		</div>
+		<div class="sub-heading">SD Card Slot</div>
+		<div class="sub-content">
+			Not a common sight, but it can be useful for DSLR users. The slot lets you skip the step of shifting content to a pen-drive for viewing your vacation photos on the big screen.
+		</div>
+		<div class="sub-heading">Optical Audio</div>
+		<div class="sub-content">
+			If you plan to connect your TV to an external audio system, we suggest you look for TVs with the digital, optical audio-output provision as well.
+		</div>
+		<div class="sub-heading">Component Port</div>
+		<div class="sub-content">
+			Still have an old DVD player? If you need to connect older-generation devices, look for component ports and 3.5-mm audio-out ports.
+		</div>
+		<div class="sub-heading">VGA Out</div>
+		<div class="sub-content">
+			Want to connect your old laptop to your TV? Since most of the old ones have VGA ports, you’ll need a VGA input-port on the TV.
+		</div>
+		<div class="selection-container" id="scroll-controller">
+			<div class="sub-heading">What are some connectivity options you're interested in?</div>
+			<div class="sub-content">
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Bluetooth</label>
+				</div>
+				<div class="selection-option">
+					<input type="checkbox" name="tmp"/> <label>Built-in WiFi</label>
+				</div>
 			</div>
 		</div>
       </section>
     </main>
-
+   <div id="sticky-bottom-button">
+		<div class="results-button" data-url="https://www.flipkart.com/televisions/pr?sid=ckf%2Cczl&otracker=categorytree&p%5B%5D=facets.screen_size%255B%255D%3D48%2B-%2B55">Show results</div>
+	</div>
   </body>
   <script>
+  let options = {
+	  root: null,
+	  rootMargin: '0px',
+	  threshold: 1.0
+  }
+  let observer = new IntersectionObserver((entries, observer) => {
+  		entries.forEach(function(entry) {
+  			console.log(entry.intersectionRatio );
+    if (entry.intersectionRatio > 0.99) {
+      document.getElementById("main-container").setAttribute('style', "top: 36px");
+    } else if(entry.intersectionRatio < 1){
+      document.getElementById("main-container").setAttribute('style', "top: 44vw");
+    }
+
+    prevRatio = entry.intersectionRatio;
+  });
+  }, options);
+
+  let target = document.querySelector('#scroll-controller');
+	observer.observe(target);
   	document.addEventListener('click', (e) => {
   		if(e.target.className == "results-button") {
   			let searchUrl = e.target.getAttribute('data-url');
