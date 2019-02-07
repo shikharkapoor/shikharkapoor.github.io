@@ -123,6 +123,23 @@
       	border-top: 1px solid #efefef;
       	padding-top: 10px;
       }
+      .results-button{
+      	    background: #2874f0;
+    		border-radius: 3px;
+    		padding: 13px 36px;
+    		font-weight: 400;
+    		color: #fff;
+		    display: inline-block;
+    		text-transform: capitalize;
+    		text-align: center;
+    		font-size: 13px;
+    		font-weight: 500;
+    		vertical-align: middle;
+    		position: relative;
+      }
+	  .button-container {
+	  		text-align: right;
+      }
     </style>
 
   </head>
@@ -171,10 +188,21 @@
 					<input type="checkbox" name="tmp"/> <label>32 inch & below</label>
 				</div>
 			</div>
+			<div class="button-container">
+				<div class="results-button" data-url="https://www.flipkart.com/televisions/pr?sid=ckf%2Cczl&otracker=categorytree&p%5B%5D=facets.screen_size%255B%255D%3D48%2B-%2B55">Show results</div>
+			</div>
 		</div>
       </section>
     </main>
 
   </body>
+  <script>
+  	document.addEventListener('click', (e) => {
+  		if(e.target.className == "results-button") {
+  			let searchUrl = e.target.getAttribute('data-url');
+  			window.location = searchUrl;
+  		}
+  	});
+  </script>
 
 </html>
